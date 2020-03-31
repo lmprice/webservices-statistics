@@ -12,6 +12,9 @@ E-Series can provide new statistics every 5 seconds, but that places additional 
 ### Polling Interval
 The analysed statistics are based on the raw counters that the E-Series system provides and we aggregate these values into a rolling window that updates every N seconds. By default, the Web Services Proxy will update statistics every 60 seconds, but this value can be set as low as 5s, or higher if desired. You can request statistics more often, but you'll only get duplicate values and the same timestamp, so you should set your polling interval accordingly.
 
+## Integrations and Recommendations
+Time-series databases are the most common way that metrics like this are tracked; examples include Graphite, InfluxDB, and Prometheus. E-Series has a project that is available on [GitHub](https://github.com/NetApp/eseries-perf-analyzer) that uses Grafana and InfluxDB to present many of the metrics we make available in pre-built dashboards.
+
 ## FAQ and Troubleshooting
 
 ### Why do I see fewer cores than I would expect for CPU statistics?
